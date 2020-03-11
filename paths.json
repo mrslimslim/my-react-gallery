@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@constants/*": ["constants/*"],
+      "@services/*": ["services/*"],
+      "@store/*": ["store/*"],
+      "@utils/*": ["utils/*"],
+      "@assets/*": ["assets/*"],
+      "@locales/*": ["locales/*"],
+      "@components/*": ["components/*"],
+      "@views/*": ["views/*"],
+      "@shared/*": ["views/shared/*"]
+    }
+  }
+}

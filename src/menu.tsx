@@ -17,7 +17,7 @@ export interface IMenu {
   id: number;
   pid?: number;
   path?: string;
-  icon?: JSX.Element;
+  icon: JSX.Element | null;
   component?: AsynchronousComponentKeys;
   exact?: boolean;
 }

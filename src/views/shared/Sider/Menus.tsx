@@ -2,15 +2,20 @@ import React from 'react';
 import Menu from 'antd/es/menu';
 
 import { arrayToTree } from '@utils/index';
-import menu, { IMenuInTree } from '../../../menu';
+import menu from '../../../menu';
 const { SubMenu } = Menu;
 
+interface INumerberObject {
+  [propName: string]: number;
+}
+
 const SiderMenu = () => {
-  const getMenus = (menuTree: IMenuInTree[]) => {
+  const levelMap: INumerberObject = {};
+  const getMenus = (menuTree: any[]) => {
     return menuTree.map(item => {
       if (item.children) {
         if (item.pid) {
-          this.levelMap[item.id] = item.pid;
+          levelMap[item.id] = item.pid;
         }
         return (
           <SubMenu
@@ -22,7 +27,7 @@ const SiderMenu = () => {
               </span>
             }
           >
-            {this.getMenus(item.children)}
+            {getMenus(item.children)}
           </SubMenu>
         );
       }
