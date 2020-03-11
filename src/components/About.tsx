@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 
-const About: React.FunctionComponent<{}> = () => {
+const About: FunctionComponent<{}> = () => {
   const [starter] = useState('my react gallery');
   return <div>{starter}</div>;
 };
